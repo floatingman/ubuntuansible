@@ -1,0 +1,7 @@
+---
+- name: Install default programs
+  apt: "name={{ item }} state=present"
+  with_items:
+    - git
+    - openjdk-8-jdk
+    - maven

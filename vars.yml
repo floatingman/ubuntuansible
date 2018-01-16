@@ -1,0 +1,10 @@
+---
+
+# which jdk version
+java_version: 8
+
+java_subversion: 162
+
+java_build: 12
+
+java_set_javahome: true
