@@ -5,3 +5,13 @@
     - git
     - openjdk-8-jdk
     - maven
+    - vim
+    - emacs25
+    - fasd
+    - python3-pip
+
+- name: Add PPA for rcm
+  apt_repository: repo='ppa:martin-frost/thoughtbot-rcm' update_cache=yes
+
+- name: Install rcm for dotfile management
+  apt: name=rcm state=present
