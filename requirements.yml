@@ -1,3 +1,5 @@
 ---
 - src: cmprescott.chrome
 - src: gantsign.intellij
+- src: gantsign.java
+- src: gantsign.maven

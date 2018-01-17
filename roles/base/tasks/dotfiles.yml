@@ -1,0 +1,12 @@
+---
+- name: Add PPA for rcm
+  apt_repository: repo='ppa:martin-frost/thoughtbot-rcm' update_cache=yes
+
+- name: Install rcm for dotfile management
+  apt: name=rcm state=present
+
+- name: Install user dotfiles
+  command: rcup {{ dotfiles.rcup_flags }}
+  when: dotfiles is defined
+  become: yes
+  become_user: "{{ user.name }}"

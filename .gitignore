@@ -1,3 +1,5 @@
 /playbook.retry
 /roles/cmprescott.chrome
 /roles/gantsign.intellij
+/jdkdownload/*.gz
+/roles/gantsign.*

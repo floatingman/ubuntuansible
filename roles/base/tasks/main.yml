@@ -3,15 +3,11 @@
   apt: "name={{ item }} state=present"
   with_items:
     - git
-    - openjdk-8-jdk
-    - maven
     - vim
     - emacs25
     - fasd
     - python3-pip
+    - python-pip
 
-- name: Add PPA for rcm
-  apt_repository: repo='ppa:martin-frost/thoughtbot-rcm' update_cache=yes
-
-- name: Install rcm for dotfile management
-  apt: name=rcm state=present
+- include: dotfiles.yml
+- include: emacs.yml

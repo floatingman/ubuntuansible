@@ -1,0 +1,5 @@
+---
+- name: Clone emacs config
+  git: repo=git@github.com:floatingman/deos.git dest=/home/{{ user.name }}/deos accept_hostkey=yes update=no
+  become: yes
+  become_user: "{{ user.name }}"

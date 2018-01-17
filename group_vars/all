@@ -1,0 +1,23 @@
+user:
+  name: dnewman
+  uid: 1000
+  group: dnewman
+  email: dwnewman78@gmail.com
+
+dotfiles:
+  url: git@github.com:floatingman/dotfiles.git
+  destination: .dotfiles
+  rcup_flags: -fx README.md
+
+users:
+  - username: dnewman
+    intellij_jdks:
+      - name: openjdk8
+        home: /usr/lib/jvm/java-1.8.0-openjdk-amd64/
+    intellij_default_jdk: openjdk8
+
+java_version: '8u161'
+java_redis_sha256sum: '6dbc56a0e3310b69e91bb64db63a485bd7b6a8083f08e48047276380a0e2021e'
+java_version_build: 12
+java_local_archive_dir: '{{ playbook_dir }}/jdkdownload'
+java_license_declaration: 'I accept the "Oracle Binary Code License Agreement for the Java SE Platform Products and JavaFX" under the terms at http://www.oracle.com/technetwork/java/javase/terms/license/index.html'
